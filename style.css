@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 0em 1em;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 1024px;
+    margin: auto;
+}
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.logo a{
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+header nav ul{
+    list-style: none;
+    position: relative;
+}
+
+header nav ul li{
+    padding-bottom: 5px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+}
+
+/* introduction-section */
+.introduction-section{
+    text-align: center;
+    padding-top: 20vh;
+    min-height: 90vh;
+}
+
+.cta-heading{
+    font-size: 2em;
+}
+
+
+.cta-subheading{
+    color: gray;
+}
+
+.cta-btn{
+    width: 15em;
+    height: 2.5em;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 50px;
+    border: 1px solid dodgerblue;
+    background-color:dodgerblue;
+    color: white;
+    margin: 1.5em;
+    transition:color 1s ease-out, background-color 1s ease-out ,border 1.5s ease-out ;
+}
+
+
+.cta-btn:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 202, 205);
+    border:rgb(19, 202, 205)  ;
+}
+
+.cta-btn-blog{
+    width: 15em;
+    height: 2.5em;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 50px;
+    border: 1px solid dodgerblue;
+    background-color: rgb(255, 255, 255);
+    margin: 1em;
+    transition: color 1s ease-out, background-color 1s ease-out, border 1.5s ease-out;
+}
+
+.cta-btn-blog:hover{
+    /* color: rgb(255, 255, 255); */
+    background-color: rgba(104, 255, 255, 0.61);
+    border: rgb(19, 202, 205);
+}
+
+
+/* about-section */
+.about-section{
+    min-height: 60vh;
+    background-color: rgb(235, 235, 235);
+}
+
+.about-section h1{
+    margin-bottom: 1.5em;
+}
+
+.about-section img{
+    width: 100%;
+    height: auto;
+    max-width: 20vh;
+    min-height: 15em;
+    margin-bottom: 1em;
+}
+
+.about-cta-btn{
+    margin-top: 1.5em;
+    width: 15em;
+    height: 2em;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+
+/* books-section */
+.books-section{
+    padding-bottom: 2em;
+    margin: 2em 0em;
+}
+
+.books-container{
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(2, 1fr));
+    /* flex-direction: column; */
+    text-align: center;
+}
+
+.books-container
+.book-card{
+    padding: 1em;
+    margin: 1em;
+    /* border: 1px solid black; */
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    min-height: 10em;
+}
+
+.books-container .book-card img{
+    width: 100%;
+    height: auto;
+    max-width: 60em;
+    min-height: 10em;
+}
+
+
+/* blog-section */
+.blog-section{
+    background-color: rgb(235, 235, 235);
+}
+
+.blog-section h1{
+    font-size: 2em;
+    padding: 1em;
+}
+
+.blog-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.blog-container  .blog-card{
+    margin: 0.6em;
+    padding: 1em;
+    box-shadow: 1px 1px 25px -1em rgb(141, 168, 168);
+}
+
+.blog-container .blog-card img{
+    width: 100%;
+    height: auto;
+    min-height: 10em;
+}
+
+.blog-container .blog-card h2{
+    margin-bottom: 1em;
+}
+
+.blog-update-time{
+    color: rgb(48, 151, 151);
+}
+
+.blog-container .blog-card p{
+    margin-bottom: 0.5em;
+}
+
+.blog-description{
+    color: rgb(57, 55, 55);
+}
+
+.blog-container .blog-card button{
+    background-color:rgb(48, 151, 151) ;
+    width: 10em;
+    height: 2em;
+    margin: 1em 0em;
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+
+.blog-container .blog-card button:hover{
+    background-color:  rgb(39, 125, 125);
+}
+
+
+/* .newsletter-banner-section */
+.newsletter-banner-section{
+    min-height: 40vh;
+    padding: 2em;
+    display: flex;
+    margin: 2em 0em;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    background-color: dodgerblue;
+    justify-content: center;
+}
+
+.newsletter-banner-section form{
+    margin: 2em;
+}
+
+.newsletter-banner-section form input{
+    width: 15em;
+    height: 2em;
+    padding: 4px;
+    font-size: 1.2em;
+}
+
+.newsletter-banner-section form button{
+    width: 15em;
+    height: 2em;
+    padding: 4px;
+    font-size: 1.2em;
+    margin: 1em 0em;
+}
+
+footer{
+    background-color: rgb(1, 21, 34);
+    color: white;
+    min-height: 35vh;
+    margin-top: 3em;
+    padding: 1em;
+}
+
+footer h2{
+    margin-bottom: 1em;
+    color: dodgerblue;
+}
+
+footer nav{
+    margin-bottom: 2em;
+}
+
+
+
+@media(min-width:768px){
+    /* .introduction-section {
+        text-align: center;
+        padding-top: 20vh;
+        min-height: 100vh;
+    } */
+
+    .cta-heading {
+        font-size: 3.5em;
+    }
+
+
+    .cta-subheading {
+        color: gray;
+        font-size: 1.5em;
+    }
+
+    /* books-section */
+    .books-section {
+        height: 50vh;
+        /* background-color: rgb(235, 235, 235);
+        padding-bottom: 2em;
+        margin: 2em 0em; */
+    }
+
+    .books-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* flex-direction: column; */
+        text-align: center;
+        padding-bottom: 3em;
+    }
+
+    .books-container .book-card {
+        padding: 1em;
+        margin: 1em;
+          /* border: 1px solid black; */
+        border-radius: 3px;
+        display: block;
+       
+        min-height: 15em;
+    }
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* .newsletter-banner-section */    
+    .newsletter-banner-section form button {
+        width: 9em;
+        margin: 0em 1em;  
+    }
+
+    footer {
+        background-color: rgb(1, 21, 34);
+        color: white;
+        min-height: 35vh;
+        margin-top: 3em;
+    }
+}
+
+/* News letter responsiveness Plus */
+@media(min-width:526px){
+    .newsletter-banner-section form button {
+        width: 9em;
+        margin: 0em 1em;
+    }
+}
+
+/* ARRIBION ADs */
+.arribion{
+    /* bottom: 1em; */
+    text-align: center;
+}
+
+.arribion-line{
+    margin-top: 0.5em;
+}
+.arribion a{
+    color: aqua;
+    text-decoration: none;
+}
+
