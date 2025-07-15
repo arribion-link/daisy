@@ -1,7 +1,20 @@
+:root{
+    --primary-color: dodgerblue;
+    --secondary-color: black;
+    --neutrol-text-color: rgb(78, 78, 78);
+    /* -- */
+    --base-background-color: white;
+    --background-color: rgb(240, 239, 239);
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+hr{
+    background-color: rgb(50, 60, 56);
 }
 
 section{
@@ -15,11 +28,11 @@ body{
 }
 
 header{
-    background-color: black;
+    background-color: var(--secondary-color);
     color: white;
     display: flex;
-    justify-content: space-around;
-    padding: 1em;
+    justify-content: space-between;
+    padding: 1em 2em;
 }
 
 .logo a{
@@ -34,18 +47,33 @@ header nav ul{
     position: relative;
 }
 
-header nav ul li{
-    padding-bottom: 5px;
-}
 
 header nav ul li a{
     text-decoration: none;
+}
+
+header nav{
+    position: absolute;
+    background-color:var(--secondary-color) ;
+    top: 3.5em;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+ nav ul li{
+    padding-bottom: 1em;
+}
+
+ nav ul li:hover{
+    background-color: rgba(11, 11, 11, 0.735);
 }
 
 /* introduction-section */
 .introduction-section{
     text-align: center;
     padding-top: 20vh;
+    height: auto;
     min-height: 90vh;
 }
 
@@ -58,19 +86,24 @@ header nav ul li a{
     color: gray;
 }
 
-.cta-btn{
-    width: 15em;
+
+.cta-btn, .cta-btn-blog{
+    margin-bottom: ;
+    width: 10em;
     height: 2.5em;
-    font-weight: 700;
-    font-size: large;
+    font-weight: 400;
+    font-size: small;
     border-radius: 50px;
-    border: 1px solid dodgerblue;
-    background-color:dodgerblue;
-    color: white;
-    margin: 1.5em;
+    margin: 1em;
     transition:color 1s ease-out, background-color 1s ease-out ,border 1.5s ease-out ;
 }
 
+.cta-btn{
+    border: 1px solid dodgerblue;
+    background-color:dodgerblue;
+    color: white;
+       
+}
 
 .cta-btn:hover{
     color: rgb(255, 255, 255);
@@ -79,59 +112,57 @@ header nav ul li a{
 }
 
 .cta-btn-blog{
-    width: 15em;
-    height: 2.5em;
-    font-weight: 700;
-    font-size: large;
-    border-radius: 50px;
     border: 1px solid dodgerblue;
-    background-color: rgb(255, 255, 255);
-    margin: 1em;
+    background-color: transparent;
+    color: dodgerblue;
     transition: color 1s ease-out, background-color 1s ease-out, border 1.5s ease-out;
 }
 
 .cta-btn-blog:hover{
-    /* color: rgb(255, 255, 255); */
-    background-color: rgba(104, 255, 255, 0.61);
-    border: rgb(19, 202, 205);
+    background-color: rgb(235, 248, 255);
 }
 
-
-/* about-section */
-.about-section{
-    min-height: 60vh;
-    background-color: rgb(235, 235, 235);
-}
-
-.about-section h1{
-    margin-bottom: 1.5em;
-}
-
-.about-section img{
-    width: 100%;
-    height: auto;
-    max-width: 20vh;
-    min-height: 15em;
-    margin-bottom: 1em;
-}
-
-.about-cta-btn{
-    margin-top: 1.5em;
-    width: 15em;
-    height: 2em;
-    background-color: dodgerblue;
-    color: white;
-    border: none;
+.cta-search{
+    /* margin-top: 3em; */
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
     border-radius: 50px;
+    box-shadow: 1px 1px 25px -0.5em rgb(197, 197, 197);
+    max-width: 70vw;
+    margin: auto;
 }
+
+
+
+.cta-search input{
+    width: 90%;
+    border: none;
+}
+
+.cta-search input:focus{
+    font-size: 1.2em;
+    /* color: red; */
+    font-weight: 200;
+    outline: none;
+}
+
+/* SALES ADVERTICEMENT */
+marquee{
+    margin-top: 1em;
+    font-size: 2em;
+    color: red;
+}
+
 
 /* books-section */
 .books-section{
     padding-bottom: 2em;
-    margin: 2em 0em;
+    margin: 5em 0em;
+    min-height: 70vh;
 }
 
 .books-container{
+    height: auto;
     display: grid;
     grid-template-columns: repeat(autofill, minmax(2, 1fr));
     /* flex-direction: column; */
@@ -142,6 +173,7 @@ header nav ul li a{
 .book-card{
     padding: 1em;
     margin: 1em;
+    max-width: 23em;
     /* border: 1px solid black; */
     border-radius: 3px;
     display: flex;
@@ -150,17 +182,52 @@ header nav ul li a{
     min-height: 10em;
 }
 
-.books-container .book-card img{
+.books-container .book-card .sale-book-cover{
     width: 100%;
     height: auto;
-    max-width: 60em;
-    min-height: 10em;
+    max-width: 10em;
+    max-height: 15rem;
+    min-height: 15em;
 }
+
+.books-container .book-card
+.book-title{
+    font-size: 1.2em;
+    color: rgb(35, 35, 35);
+ }
+
+ .books-container .book-card 
+ .book-author{
+    color: var(--neutrol-text-color);
+    margin: 0.7em 0em;
+ }
+
+  .books-container .book-card 
+  .add-to-cart-btn{
+    margin: 1em 0em;
+    width: 10em;
+    height: 2em;
+    font-weight: 700;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--base-background-color);
+  }
+
+  .books-container
+.book-card .add-to-cart-btn:hover{
+    background-color: rgb(16, 118, 219);
+}
+
+
 
 
 /* blog-section */
 .blog-section{
-    background-color: rgb(235, 235, 235);
+    height: auto;
+    min-height: 70vh;
+    background-color:var(--background-color);
 }
 
 .blog-section h1{
@@ -171,6 +238,7 @@ header nav ul li a{
 .blog-container{
     display: grid;
     grid-template-columns: 1fr;
+    padding: 2em 0em;
 }
 
 
@@ -219,6 +287,11 @@ header nav ul li a{
 
 /* .newsletter-banner-section */
 .newsletter-banner-section{
+    background-image: url() ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     min-height: 40vh;
     padding: 2em;
     display: flex;
@@ -237,8 +310,14 @@ header nav ul li a{
 .newsletter-banner-section form input{
     width: 15em;
     height: 2em;
-    padding: 4px;
+    padding: 7px;
     font-size: 1.2em;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter-banner-section form input:focus{
+    outline: none;
 }
 
 .newsletter-banner-section form button{
@@ -247,7 +326,41 @@ header nav ul li a{
     padding: 4px;
     font-size: 1.2em;
     margin: 1em 0em;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
 }
+
+
+/* about-section */
+.about-section{
+    min-height: 60vh;
+    background-color: rgb(235, 235, 235);
+}
+
+.about-section h1{
+    margin-bottom: 1.5em;
+}
+
+.about-section img{
+    width: 100%;
+    height: auto;
+    max-width: 20;
+    min-height: 15em;
+    margin-bottom: 1em;
+}
+
+.about-cta-btn{
+    margin: 1.5em 0em 4em 0em;
+    width: 15em;
+    height: 2em;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
 
 footer{
     background-color: rgb(1, 21, 34);
@@ -259,22 +372,53 @@ footer{
 
 footer h2{
     margin-bottom: 1em;
-    color: dodgerblue;
+    color: rgb(255, 255, 255);
 }
 
 footer nav{
     margin-bottom: 2em;
 }
 
+footer nav h3{
+    color: darkcyan;
+    margin: 2em 0em 0.5em 0em;
+}
+
+footer nav ul{
+    list-style: none;
+}
+
+footer nav ul a{
+    text-decoration: none;
+    color:white ;
+}
+
+footer nav ul a:hover{
+    text-decoration: 1px underline;
+}
+
+footer button{
+    width: 10em;
+    height: 2em;
+    margin-bottom: 1em;
+}
 
 
 @media(min-width:768px){
-    /* .introduction-section {
-        text-align: center;
-        padding-top: 20vh;
-        min-height: 100vh;
-    } */
+    .cta-btn, .cta-btn-blog {
+        width: 15em;
+        height: 2.5em;
+        font-weight: 700;
+        font-size: large;
+        border-radius: 50px;
+        margin: 1.5em;
+        transition: color 1s ease-out, background-color 1s ease-out, border 1.5s ease-out;
+    }
 
+    .cta-search {
+        width: 40vw;
+    }
+    
     .cta-heading {
         font-size: 3.5em;
     }
@@ -346,6 +490,7 @@ footer nav{
 
 .arribion-line{
     margin-top: 0.5em;
+    font-size: 0.8em;
 }
 .arribion a{
     color: aqua;

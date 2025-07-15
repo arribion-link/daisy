@@ -13,15 +13,21 @@
 <body>
     <header>
         <p class="logo"><a href="index.html">DAISY</a></p>
-        <nav>
+        <nav id="nav">
             <ul><a href="#">Home</a></ul>
             <ul><a href="#">Services</a></ul>
             <ul><a href="#">Blog</a></ul>
             <ul><a href="#">Books/Products</a></ul>
             <ul><a href="#">Contact</a></ul>
         </nav>
+        <p id="navBars" onclick="shownav()">{{+}}</p>
     </header>
 
+    <div>
+        <marquee behavior="" direction="left">
+           Books Sales at  30% Off Buy now don't be left out with this amazing offer
+        </marquee>
+    </div>
     <main>
         <section class="introduction-section">
             <h1 class="cta-heading"><span style="color: dodgerblue;">DAISY ZIZI </span><br class="heading-break-mobile"> A MARKETPLACE FOR AUTHORS</h1>
@@ -32,69 +38,94 @@
             <a href="#Blogs">
                 <button class="cta-btn-blog">Read My Blog</button>
             </a>
+            
+            <br><br><br><br>
+            
+            <div class="cta-search">
+                <input type="search" placeholder="Search for book, Blog...">
+            </div>
         </section>
+        
 
-        <section class="about-section">
-            <h1>Who is Daisy?</h1>
-            <img src="" 
-            alt="Daisy Binance">
-            <h3></h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Totam eaque in ea inventore magnam officia doloribus mollitia.
-                Aperiam quibusdam repellendus explicabo reprehenderit esse
-                ratione magnam distinctio. Dicta reiciendis aspernatur maiores?
-            </p>
-            <button class="about-cta-btn">Book a Call</button>
-        </section>
-
+        
         <section class="books-section"  id="Books">
             <div class="books-container">
                 <div class="book-card">
-                    <img src="" 
-                    alt="Book on Sale">
+                    <img src="../home-entryway-with-modern-furnishing-REP-COVER.jpg" 
+                    alt="Book on Sale" class="sale-book-cover">
                     <div>
-                        <h3>Jeff's Designs</h3>
+                        <h3 class="book-title">Test fit cover</h3>
+                        <h4 class="book-author">Daisy Zizi</h4>
+                        <div class="rating-stars">
+                            
+                        </div>
+                        <h3 class="book-price">Kshs<span>3,000</span></h3>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <img src="../introduction-to-ai-arribion-cover.jpg" 
+                    alt="Book on Sale" class="sale-book-cover">
+                    <div>
+                        <h3 class="book-title">Test long-with small-height cover(2:1)</h3>
+                        <h4 class="book-author">Daisy Zizi</h4>
                         <div class="rating-stars">
     
                         </div>
-                        <h3>Kshs<span>3,000</span></h3>
-                        <button>Add To Cart</button>
+                        <h3 class="book-price">Kshs<span>3,000</span></h3>
+                        <button class="add-to-cart-btn">Add To Cart</button>
                     </div>
                 </div>
                 <div class="book-card">
-                    <img src="" 
-                    alt="Book on Sale">
+                    <img src="../06.07.2025_06.14.50_REC.png" 
+                    alt="Book on Sale" class="sale-book-cover">
                     <div>
-                        <h3>Jeff's Designs</h3>
+                        <h3 class="book-title">Test small-width long-height cover(1:2)</h3>
+                        <h4 class="book-author"></h4>
                         <div class="rating-stars">
     
                         </div>
-                        <h3>Kshs<span>3,000</span></h3>
-                        <button>Add To Cart</button>
+                        <h3 class="book-price">Kshs<span>3,000</span></h3>
+                        <button class="add-to-cart-btn">Add To Cart</button>
                     </div>
                 </div>
-                <div class="book-card">
-                    <img src="" 
-                    alt="Book on Sale">
+                 <div class="book-card">
+                    <img src="../home-entryway-with-modern-furnishing-REP-COVER.jpg" 
+                    alt="Book on Sale" class="sale-book-cover">
                     <div>
-                        <h3>Jeff's Designs</h3>
+                        <h3 class="book-title">Test Small title</h3>
+                        <h4 class="book-author">Daisy Zizi</h4>
                         <div class="rating-stars">
-    
+                            
                         </div>
-                        <h3>Kshs<span>3,000</span></h3>
-                        <button>Add To Cart</button>
+                        <h3 class="book-price">Kshs<span>3,000</span></h3>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+                 <div class="book-card">
+                    <img src="../home-entryway-with-modern-furnishing-REP-COVER.jpg" 
+                    alt="Book on Sale" class="sale-book-cover">
+                    <div>
+                        <h3 class="book-title">Test Long title(Failed)</h3>
+                        <h4 class="book-author">Daisy Zizi</h4>
+                        <div class="rating-stars">
+                            
+                        </div>
+                        <h3 class="book-price">Kshs<span>3,000</span></h3>
+                        <button class="add-to-cart-btn">Add To Cart</button>
                     </div>
                 </div>
             </div>
             <button>EXplore More Books</button>
+            <h1>Section height desktop (Failed)</h1>
         </section>
 
         <section class="blog-section" id="Blogs">
             <h1>Featured Top Blogs</h1>
             <div class="blog-container">
                 <div class="blog-card">
-                    <img src="" 
+                    <img src="https://images.pexels.com/photos/844928/pexels-photo-844928.jpeg"
                     alt="blog thumbnail">
                     <h2>The Secret In Daily Routine.</h2>
                     <p class="blog-update-time">Updated: <span>12th 7 2025</span></p>
@@ -104,7 +135,7 @@
                     <button>Read More</button>
                 </div>
                 <div class="blog-card">
-                    <img src="" 
+                    <img src="https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg" 
                     alt="blog thumbnail">
                     <h2>The Secret In Daily Routine.</h2>
                     <p class="blog-update-time">Updated: <span>12th 7 2025</span></p>
@@ -114,7 +145,7 @@
                     <button>Read More</button>
                 </div>
                 <div class="blog-card">
-                    <img src="" 
+                    <img src="https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg" 
                     alt="blog thumbnail">
                     <h2>The Secret In Daily Routine.</h2>
                     <p class="blog-update-time">Updated: <span>12th 7 2025</span></p>
@@ -134,28 +165,45 @@
                 <input type="email" placeholder="Your Email..."><button>Send</button>
             </form>
         </section>
+        <section class="about-section">
+            <h1>Who is Daisy?</h1>
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" 
+            alt="Daisy Zizi">
+            <h3></h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Totam eaque in ea inventore magnam officia doloribus mollitia.
+                Aperiam quibusdam repellendus explicabo reprehenderit esse
+                ratione magnam distinctio. Dicta reiciendis aspernatur maiores?
+            </p>
+            <a href="../pages/contact.html">
+                <button class="about-cta-btn">Talk With Me</button>
+            </a>
+        </section>
     </main>
 <div>
     
 </div>
     <footer>
-        <h2>JEFF's BLOG</h2>
+        <h2>DAISY</h2>
         <button>Buy Me coffe</button>
         <nav>
             <h3>Quick Links</h3>
-            <nav>
-                <ul>
-                    <ul><a href="#">Home</a></ul>
-                    <ul><a href="#">Services</a></ul>
-                    <ul><a href="#">Blog</a></ul>
-                    <ul><a href="/books-product">Books/Products</a></ul>
-                    <!-- <ul><a href="#">Book a Call</a></ul>        -->
-                </ul>
-            </nav>
-        </nav>     
-        <p>&COPY; <span>2025</span> Jeff Mutethia. All Rights Reserved.</p> 
+            <ul>
+                <ul><a href="#">Home</a></ul>
+                <ul><a href="#">Services</a></ul>
+                <ul><a href="#">Blog</a></ul>
+                <ul><a href="/books-product">Books/Products</a></ul>
+                <!-- <ul><a href="#">Book a Call</a></ul>        -->
+            </ul>
+        </nav>   
+        <hr><br>  
+        <p>&COPY; <span>2025</span> Daisy Zizi. All Rights Reserved.</p>
+        
+        <!-- target="_blank" --> 
+        <span style="margin-right: 5em;"><a href="#">Private Policy</a></span>
+        <span><a href="#">Terms & Conditions</a></span><br><br>
         <p class="arribion-line">Power By: <span class="arribion"><a href="#"</a>Arribion Technologies Ltd.</a></span></p>
-        <!-- target="_blank" -->
     </footer>
 </body>
 </html>
