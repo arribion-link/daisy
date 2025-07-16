@@ -69,12 +69,34 @@ header nav{
     background-color: rgba(11, 11, 11, 0.735);
 }
 
+/* GROUPS */
+.cta-explore-more-blogs-container,
+.cta-explore-more-books-container {
+    text-align: center;
+}
+
+.cta-explore-more-blogs,
+.cta-explore-more-books {
+    width: 15em;
+    height: 2.5em;
+    margin: 4em;
+    border: none;
+    /* text-align: center; */
+    border-radius: 50px;
+    color: var(--base-background-color);
+    background-color: var(--secondary-color);
+}
+
+
+
+
+
 /* introduction-section */
 .introduction-section{
     text-align: center;
     padding-top: 20vh;
     height: auto;
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .cta-heading{
@@ -126,8 +148,9 @@ header nav{
     /* margin-top: 3em; */
     padding: 5px;
     background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(220, 220, 220, 0.467);
     border-radius: 50px;
-    box-shadow: 1px 1px 25px -0.5em rgb(197, 197, 197);
+    box-shadow: 1px 1px 20px -0.5em rgba(0, 0, 0, 0.088);
     max-width: 70vw;
     margin: auto;
 }
@@ -159,6 +182,16 @@ marquee{
     padding-bottom: 2em;
     margin: 5em 0em;
     min-height: 70vh;
+    height: auto;
+}
+
+.books-section
+.book-section-heading{
+    text-align: center;
+    font-family:monospace;
+    font-size: 2em;
+    margin-top: 2em;
+    color: blueviolet;
 }
 
 .books-container{
@@ -171,15 +204,16 @@ marquee{
 
 .books-container
 .book-card{
-    padding: 1em;
+    padding: 2em;
     margin: 1em;
-    max-width: 23em;
+    max-width: 100%;
     /* border: 1px solid black; */
     border-radius: 3px;
-    display: flex;
+  
     justify-content: space-between;
     gap: 1em;
     min-height: 10em;
+    border: 1px solid gainsboro;
 }
 
 .books-container .book-card .sale-book-cover{
@@ -194,12 +228,18 @@ marquee{
 .book-title{
     font-size: 1.2em;
     color: rgb(35, 35, 35);
+    width: 100%;
  }
 
- .books-container .book-card 
- .book-author{
+
+
+.books-container .book-card 
+.book-author{
     color: var(--neutrol-text-color);
     margin: 0.7em 0em;
+    color: var(--primary-color);
+    cursor: pointer;
+    /* color: ; */
  }
 
   .books-container .book-card 
@@ -284,6 +324,10 @@ marquee{
     background-color:  rgb(39, 125, 125);
 }
 
+.cta-explore-more-blogs{
+    margin-top: 1em;
+}
+
 
 /* .newsletter-banner-section */
 .newsletter-banner-section{
@@ -293,6 +337,7 @@ marquee{
     background-size: cover;
     
     min-height: 40vh;
+    height: auto;
     padding: 2em;
     display: flex;
     margin: 2em 0em;
@@ -308,10 +353,10 @@ marquee{
 }
 
 .newsletter-banner-section form input{
-    width: 15em;
+    width: 16em;
     height: 2em;
-    padding: 7px;
-    font-size: 1.2em;
+    padding: 10px;
+    font-size: 1em;
     border-radius: 5px;
     border: none;
 }
@@ -321,19 +366,25 @@ marquee{
 }
 
 .newsletter-banner-section form button{
-    width: 15em;
-    height: 2em;
+    width: 13em;
+    height: 1.7em;
     padding: 4px;
     font-size: 1.2em;
     margin: 1em 0em;
     border-radius: 5px;
     border: none;
     font-weight: 700;
+    color: rgb(88, 88, 88);
+    transition: background-color 1s ease-out;
 }
 
+.newsletter-banner-section form button:hover{
+    background-color: aquamarine;
+}
 
 /* about-section */
 .about-section{
+    height: auto;
     min-height: 60vh;
     background-color: rgb(235, 235, 235);
 }
@@ -359,6 +410,21 @@ marquee{
     border: none;
     border-radius: 50px;
     cursor: pointer;
+}
+
+.sample-song-from-youtube {
+    text-align: center;
+    /* margin: auto; */
+    width: 100%;
+    height: auto;
+    min-height: 5em;
+    /* background-color: var(--primary-color); */
+    /* min-width: 100%; */
+}
+
+.sample-song-from-youtube video {
+    width: fit-content;
+    height: auto;
 }
 
 
@@ -403,6 +469,14 @@ footer button{
     margin-bottom: 1em;
 }
 
+/* MIDEA QUERIES */
+@media(min-width:500px) {
+    .books-container .book-card {
+        display: flex;
+    }
+
+}
+
 
 @media(min-width:768px){
     .cta-btn, .cta-btn-blog {
@@ -424,38 +498,30 @@ footer button{
     }
 
 
-    .cta-subheading {
-        color: gray;
-        font-size: 1.5em;
-    }
-
     /* books-section */
     .books-section {
-        height: 50vh;
-        /* background-color: rgb(235, 235, 235);
-        padding-bottom: 2em;
-        margin: 2em 0em; */
+        height: auto;
+        min-height: 50vh;
     }
 
     .books-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        /* flex-direction: column; */
-        text-align: center;
-        padding-bottom: 3em;
     }
 
     .books-container .book-card {
-        padding: 1em;
-        margin: 1em;
-          /* border: 1px solid black; */
-        border-radius: 3px;
         display: block;
-       
-        min-height: 15em;
+    }
+
+    /* blog-section */
+    .blog-section {
+        height: auto;
+        min-height: 50vh;
+        background-color: var(--background-color);
     }
 
     .blog-container {
+        height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -480,6 +546,13 @@ footer button{
         width: 9em;
         margin: 0em 1em;
     }
+}
+
+@media(min-width:1024px){
+    .books-container .book-card {  
+        display: block;
+    }
+
 }
 
 /* ARRIBION ADs */

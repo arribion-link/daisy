@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" 
-    content="Daisy blog and Marketplace"/>
+    content="Daisy blog and Marketplace is a place where upcomming and established Author, poets 
+    and story teller can share the content"/>
     <!-- <meta property="og:image" content="path to the image"/> -->
     <title>Zizi Daisy | Blog and Books Marketplace.</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./arribion-link_@_2025_JEFF_MUTETHIA_All-Rights-Reserved-logo.png">
+    <link rel="stylesheet" href="../views/style.css">
+    <link rel="icon" href="../views/arribion-link_@_2025_JEFF_MUTETHIA_All-Rights-Reserved-logo.png">
 </head>
 <body>
+
     <header>
         <p class="logo"><a href="index.html">DAISY</a></p>
         <nav id="nav">
@@ -49,6 +51,7 @@
 
         
         <section class="books-section"  id="Books">
+            <h1 class="book-section-heading">BestSeller Books</h1>
             <div class="books-container">
                 <div class="book-card">
                     <img src="../home-entryway-with-modern-furnishing-REP-COVER.jpg" 
@@ -106,9 +109,11 @@
                  <div class="book-card">
                     <img src="../home-entryway-with-modern-furnishing-REP-COVER.jpg" 
                     alt="Book on Sale" class="sale-book-cover">
+                   
                     <div>
-                        <h3 class="book-title">Test Long title(Failed)</h3>
-                        <h4 class="book-author">Daisy Zizi</h4>
+                        <h3 class="book-title">Test Long title(This title is meant to be as long as possible for demostrating the the book card behavior when the author as a  long book title)</h3>
+                        <h4 class="book-author">Preview</h4>
+                 
                         <div class="rating-stars">
                             
                         </div>
@@ -117,8 +122,11 @@
                     </div>
                 </div>
             </div>
-            <button>EXplore More Books</button>
-            <h1 style="color: red;">SECTION COLLISION</h1>
+            <div class="cta-explore-more-books-container">
+                <a href="../pages/publicBooks.html">
+                    <button class="cta-explore-more-books">EXplore More Books</button>
+                </a>
+            </div>
         </section>
 
         <section class="blog-section" id="Blogs">
@@ -156,7 +164,11 @@
                 </div>
 
             </div>
-            <button>Explore More Blogs </button>
+            <div class="cta-explore-more-blogs-container">
+                <a href="../pages/blog.html">
+                    <button class="cta-explore-more-blogs">Explore More Blogs </button>
+                </a>
+            </div>
         </section>
 
         <section class="newsletter-banner-section">
@@ -166,19 +178,26 @@
             </form>
         </section>
         <section class="about-section">
-            <h1>Who is Daisy?</h1>
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" 
-            alt="Daisy Zizi">
-            <h3></h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Totam eaque in ea inventore magnam officia doloribus mollitia.
-                Aperiam quibusdam repellendus explicabo reprehenderit esse
-                ratione magnam distinctio. Dicta reiciendis aspernatur maiores?
-            </p>
-            <a href="../pages/contact.html">
-                <button class="about-cta-btn">Talk With Me</button>
-            </a>
+            <div>
+                <h1>Who is Daisy?</h1>
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" 
+                alt="Daisy Zizi">
+                <h3></h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Totam eaque in ea inventore magnam officia doloribus mollitia.
+                    Aperiam quibusdam repellendus explicabo reprehenderit esse
+                    ratione magnam distinctio. Dicta reiciendis aspernatur maiores?
+                </p>
+                <a href="../pages/contact.html">
+                    <button class="about-cta-btn">Talk With Me</button>
+                </a>
+            </div>
+            <div class="sample-song-from-youtube">
+                <h1>My Latest Song</h1>
+
+                <video src="#" controls></video>
+            </div>
         </section>
     </main>
 <div>
@@ -186,7 +205,7 @@
 </div>
     <footer>
         <h2>DAISY</h2>
-        <button>Buy Me coffe</button>
+        <button>Buy Me coffee</button>
         <nav>
             <h3>Quick Links</h3>
             <ul>

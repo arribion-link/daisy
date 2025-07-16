@@ -1,0 +1,141 @@
+:root{
+    --primary-color:dodgerblue;
+    --secondary-color: black;
+    --text-neutrol-color: rgb(61, 63, 67);
+}
+
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0em 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* dashboard-container */
+.dashboard-container{
+    left: 0;
+    top: 0;
+    /* display: flex; */
+    /* flex-direction: row-reverse; */
+}
+
+aside{
+    background-color: rgb(255, 255, 255);
+    /* color: white; */
+box-shadow: 1px 1px 20px -1.3em ;
+    position: fixed;
+    /* z-index: 2; */
+    top: 0;
+    left: 0;
+    height: auto;
+    min-height: 100vh;
+    width: 20vw;
+
+    padding: 8em 1em 0em 1em;
+}
+
+main{
+    /* margin-left: 1em; */
+    position: relative;
+    left: 0;
+    margin-left: calc(100% - 80%);
+    /* background-color: blue; */
+    min-height: 100vh;
+}
+
+.top-bar{
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    margin-right: calc(100% - 69%);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 1em;
+}
+
+.logo-route{
+    text-decoration: none;
+}
+
+.logo{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.top-bar nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.top-bar nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.profile-container{
+    margin-top: calc(100% - 89%);
+    min-width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 2em;
+    min-height: 40vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 20px -10em rgba(0, 0, 0, 0.158);
+}
+
+.user-visuals{
+    min-height: 8em;
+    border: 1px solid gainsboro;
+}
+
+.profile-bio-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0em;
+    /* background-color: red; */
+}
+
+
+
+.bio-container{
+    /* max-width: 15em; */
+}
+
+/* sales-analytics-container */
+.sales-analytics-container{
+    min-height: 40vh;
+    margin-top: 2em;
+   border: 1px solid gainsboro;
+   border-radius: 10px;
+   padding: 1.5em;
+}
+
+.sales-stats-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.sales-stats-container div{
+    background-color: gainsboro;
+    padding: 1em;
+    min-height: 100%;
+}
+
+.Traffic-analytics-container{
+    min-height: 40vh;
+    margin-top: 2em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gainsboro;
+    padding: 1em;
+    border-radius: 10px;
+}
